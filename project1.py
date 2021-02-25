@@ -29,16 +29,6 @@ def hinge_loss_single(feature_vector, label, theta, theta_0):
     Finds the hinge loss on a single data point given specific classification
     parameters.
 
-    Args:
-        feature_vector - A numpy array describing the given data point.
-        label - A real valued number, the correct classification of the data
-            point.
-        theta - A numpy array describing the linear classifier.
-        theta_0 - A real valued number representing the offset parameter.
-
-
-    Returns: A real number representing the hinge loss associated with the
-    given data point and parameters.
     """
     agreement = label * (np.dot(feature_vector, theta.transpose()) + theta_0)
     return max(0, 1 - agreement)
@@ -52,7 +42,7 @@ def hinge_loss_single(feature_vector, label, theta, theta_0):
 # pragma: coderesponse template
 def hinge_loss_full(feature_matrix, labels, theta, theta_0):
     """
-    Finds the total hinge loss on a set of data given specific classification
+    Finds the total(average) hinge loss on a set of data given specific classification
     parameters.
 
     Args:
@@ -63,10 +53,6 @@ def hinge_loss_full(feature_matrix, labels, theta, theta_0):
         theta - A numpy array describing the linear classifier.
         theta_0 - A real valued number representing the offset parameter.
 
-
-    Returns: A real number representing the hinge loss associated with the
-    given dataset and parameters. This number should be the average hinge
-    loss across all of the points in the feature matrix.
     """
 
 
