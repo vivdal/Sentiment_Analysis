@@ -7,7 +7,7 @@ import random
 # Part I
 
 
-# pragma: coderesponse template
+
 def get_order(n_samples):
     try:
         with open(str(n_samples) + '.txt') as fp:
@@ -20,10 +20,10 @@ def get_order(n_samples):
         return indices
 
 
-# pragma: coderesponse end
 
 
-# pragma: coderesponse template
+
+
 def hinge_loss_single(feature_vector, label, theta, theta_0):
     """
     Finds the hinge loss on a single data point given specific classification
@@ -36,10 +36,10 @@ def hinge_loss_single(feature_vector, label, theta, theta_0):
     raise NotImplementedError
 
 
-# pragma: coderesponse end
 
 
-# pragma: coderesponse template
+
+
 def hinge_loss_full(feature_matrix, labels, theta, theta_0):
     """
     Finds the total(average) hinge loss on a set of data given specific classification
@@ -63,10 +63,9 @@ def hinge_loss_full(feature_matrix, labels, theta, theta_0):
     raise NotImplementedError
 
 
-# pragma: coderesponse end
 
 
-# pragma: coderesponse template
+
 def perceptron_single_step_update(
         feature_vector,
         label,
@@ -99,18 +98,15 @@ def perceptron_single_step_update(
     raise NotImplementedError
 
 
-# pragma: coderesponse end
 
 
-# pragma: coderesponse template
+
+
 def perceptron(feature_matrix, labels, T):
     """
     Runs the full perceptron algorithm on a given set of data. Runs T
     iterations through the data set, there is no need to worry about
     stopping early.
-
-    NOTE: Please use the previously implemented functions when applicable.
-    Do not copy paste code from previous parts.
 
     NOTE: Iterate the data matrix by the orders returned by get_order(feature_matrix.shape[0])
 
@@ -139,18 +135,15 @@ def perceptron(feature_matrix, labels, T):
     raise NotImplementedError
 
 
-# pragma: coderesponse end
 
 
-# pragma: coderesponse template
 def average_perceptron(feature_matrix, labels, T):
     """
     Runs the average perceptron algorithm on a given set of data. Runs T
     iterations through the data set, there is no need to worry about
     stopping early.
 
-    NOTE: Please use the previously implemented functions when applicable.
-    Do not copy paste code from previous parts.
+    
 
     NOTE: Iterate the data matrix by the orders returned by get_order(feature_matrix.shape[0])
 
@@ -192,10 +185,9 @@ def average_perceptron(feature_matrix, labels, T):
     raise NotImplementedError
 
 
-# pragma: coderesponse end
 
 
-# pragma: coderesponse template
+
 def pegasos_single_step_update(
         feature_vector,
         label,
@@ -237,10 +229,10 @@ def pegasos_single_step_update(
     raise NotImplementedError
 
 
-# pragma: coderesponse end
 
 
-# pragma: coderesponse template
+
+
 def pegasos(feature_matrix, labels, T, L):
     """
     Runs the Pegasos algorithm on a given set of data. Runs T
@@ -284,12 +276,12 @@ def pegasos(feature_matrix, labels, T, L):
     raise NotImplementedError
 
 
-# pragma: coderesponse end
+
 
 # Part II
 
 
-# pragma: coderesponse template
+
 def classify(feature_matrix, theta, theta_0):
     """
     A classification function that uses theta and theta_0 to classify a set of
@@ -319,10 +311,7 @@ def classify(feature_matrix, theta, theta_0):
     raise NotImplementedError
 
 
-# pragma: coderesponse end
 
-
-# pragma: coderesponse template
 def classifier_accuracy(
         classifier,
         train_feature_matrix,
@@ -364,10 +353,7 @@ def classifier_accuracy(
     raise NotImplementedError
 
 
-# pragma: coderesponse end
 
-
-# pragma: coderesponse template
 def extract_words(input_string):
     """
     Helper function for bag_of_words()
@@ -381,10 +367,7 @@ def extract_words(input_string):
     return input_string.lower().split()
 
 
-# pragma: coderesponse end
 
-
-# pragma: coderesponse template
 def bag_of_words(texts):
     """
     Inputs a list of string reviews
@@ -408,10 +391,7 @@ def bag_of_words(texts):
     return dictionary
 
 
-# pragma: coderesponse end
 
-
-# pragma: coderesponse template
 def extract_bow_feature_vectors(reviews, dictionary):
     """
     Inputs a list of string reviews
@@ -422,7 +402,7 @@ def extract_bow_feature_vectors(reviews, dictionary):
 
     Feel free to change this code as guided by Problem 9
     """
-    # Your code here
+    
 
     num_reviews = len(reviews)
     feature_matrix = np.zeros([num_reviews, len(dictionary)])
@@ -435,14 +415,10 @@ def extract_bow_feature_vectors(reviews, dictionary):
     return feature_matrix
 
 
-# pragma: coderesponse end
 
-
-# pragma: coderesponse template
 def accuracy(preds, targets):
     """
     Given length-N vectors containing predicted and target labels,
     returns the percentage and number of correct predictions.
     """
     return (preds == targets).mean()
-# pragma: coderesponse end

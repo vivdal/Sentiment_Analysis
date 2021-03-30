@@ -9,6 +9,7 @@ if sys.version_info[0] < 3:
     PYTHON3 = False
 else:
     PYTHON3 = True
+    
 
 def load_toy_data(path_toy_data):
     """

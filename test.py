@@ -455,6 +455,7 @@ def main():
         check_extract_bow_feature_vectors()
     except Exception:
         log_exit(traceback.format_exc())
+        
 
 if __name__ == "__main__":
     main()
