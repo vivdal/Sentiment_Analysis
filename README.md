@@ -19,7 +19,7 @@ This file contains all the custom definition of the functions used to classify t
  </ul>
  
 *Note:* The average perceptron is just a simple modification of the perceptron algorithm and includes the average of all the parameters across nT steps and pegasos algorithm is implemented by incorporating the bias term in the following pseudo-algorithm.
-<img src = "img2.PNG">
+<img src = "images/img2.PNG">
 
 ## main.py
 This file contains the methods to call the written function and produce outputs.
@@ -27,3 +27,10 @@ This file contains the methods to call the written function and produce outputs.
 This file contains the utility functions to process and prepare dataset.
 ## test.py
 This file contains test data to test the implementation of the functions.
+
+### Accuracy
+**Best learning algorithm:** Pegasos
+**Validation accuracy after tuning:** 0.8060 with T=25, lambda =0.01
+**Test accuracy after stop-words removal:** 0.808
+
+
